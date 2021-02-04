@@ -72,7 +72,7 @@ lsblk -f
 
 pacman -S reflector && reflector --verbose  -l 5 -p https --sort rate --save /etc/pacman.d/mirrorlist && pacman -Syyu
 echo 'Установка основных пакетов'
-pacstrap /mnt base base-devel linux linux-firmware nano dhcpcd
+pacstrap /mnt base base-devel linux linux-firmware nano dhcpcd efibootmgr
 
 echo 'Настройка системы'
 genfstab -pU /mnt >> /mnt/etc/fstab
