@@ -79,6 +79,6 @@ genfstab -pU /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 pacman -Syy
-efibootmgr -d /dev/sda -p 1 -c -L "Arch Linux" -l /vmlinuz-linux -u "root=/dev/sda2 rw initrd=\initramfs-linux.img"
-efibootmgr -o 0004
-passwd
+# efibootmgr -d /dev/sda -p 1 -c -L "Arch Linux" -l /vmlinuz-linux -u "root=/dev/sda2 rw initrd=\initramfs-linux.img"
+# efibootmgr -o 0004
+# passwd
