@@ -77,4 +77,4 @@ pacstrap /mnt base base-devel linux linux-firmware nano dhcpcd efibootmgr
 echo 'Настройка системы'
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt
+arch-chroot /mnt sh -c "$(curl -fsSL git.io/archlinuxinstall2.sh)"
